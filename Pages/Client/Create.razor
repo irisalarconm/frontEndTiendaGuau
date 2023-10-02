@@ -1,0 +1,101 @@
+﻿@using Services;
+@using ModelsDTO;
+
+@page "/Client/Create"
+@inject ClientService clientService;
+@inject NavigationManager navigation;
+
+<h3>You are creating a new client! 🤗</h3>
+
+<EditForm Model="client" OnSubmit="OnSubmit">
+    <div class="form-create">
+        <div class="div-lab mb-3">
+            <label class="form-label">Name</label>
+            <div class="inp"><InputText class="form-control" @bind-Value="client.NameClient"></InputText></div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Lastname</label>
+            <div class="inp">
+                <InputText class="form-control" @bind-Value="client.LastnameClient"></InputText>
+            </div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">DNI</label>
+            <div class="inp">
+                <InputNumber class="form-control" @bind-Value="client.DNIClient"></InputNumber>
+            </div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Address</label>
+            <div class="inp">
+                <InputText class="form-control" @bind-Value="client.AdressClient"></InputText>
+            </div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Phone</label>
+             <div class="inp">
+                <InputNumber class="form-control" @bind-Value="client.Phone"></InputNumber>
+            </div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Status</label>
+            <select class="inp form-control" @bind="statusClient">
+                <option>Activo</option>
+                <option>Inactivo</option>
+                <option>Bloqueado</option>
+            </select>
+            <InputNumber class="form-control" @bind-Value="client.status" disable="true" style="display: none;"></InputNumber>
+        </div>
+        <div class="btn-div">
+            <button class="btn btn-create" type="submit">Create</button>
+
+            <a class="btn btn-warning" href="Client/index">Back</a>
+        </div>
+        
+    </div>
+</EditForm>
+<FooterNav/>
+
+@code {
+
+    ClientDTO client = new ClientDTO();
+
+    bool IsCreated = false;
+    private string statusClient;
+    private int status;
+
+
+    private async Task OnSubmit()
+    {
+        ChangeStatus();
+
+        await clientService.CreateClient(client);
+
+        IsCreated = true;
+
+        if (IsCreated)
+        {
+            navigation.NavigateTo("Client/index");
+        }
+    }
+    int EnumToString(string status)
+    {
+        switch (status)
+        {
+            case "Activo":
+                return 0;
+            case "Inactivo":
+                return 1;
+            case "Bloqueado":
+                return 2;
+            default:
+                return 4;
+        }
+    }
+    private void ChangeStatus()
+    {
+        client.status = EnumToString(statusClient);
+    }
+
+    
+}

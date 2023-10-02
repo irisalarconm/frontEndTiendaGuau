@@ -1,0 +1,86 @@
+﻿@using FrontEndTiendaGuau.Services;
+@using ModelsDTO;
+
+
+@page "/Client/index"
+@inject ClientService clientService;
+
+<h3>C L I E N T S</h3>
+
+<a href="/Client/Create" class="btn btn-create">Create New Client</a>
+
+<table class="tb">
+    <thead class="htable">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Lastname</th>
+            <th>DNI</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    @if (IsLoaded == true)
+    {
+        @foreach (var client in clients)
+        {
+            <tr>
+                <td>@client.ClientId</td>
+                <td>@client.NameClient</td>
+                <td>@client.LastnameClient</td>
+                <td>@client.DNIClient</td>
+                <td>@client.AdressClient</td>
+                <td>@client.Phone</td>
+                <td>@EnumToString(client.status)</td>
+                <td>
+                    <a href="/Client/Edit/@client.ClientId" class="btn btn-edit" type="button"> <span class="oi oi-pencil" aria-hidden="true"></span></a>
+                    <a href="/Client/Details/@client.ClientId" class="btn btn-details" type="button"> <span class="oi oi-spreadsheet" aria-hidden="true"></span></a>
+                    <a href="/Client/Delete/@client.ClientId" class="btn btn-delete" type="button"> <span class="oi oi-trash" aria-hidden="true"></span></a>
+                </td>
+                <!-- Otras propiedades del cliente -->
+            </tr>
+        }
+
+    }
+    else
+    {
+        <tr>
+            <td>Rafael gracias no sirvió</td>
+        </tr>
+    }
+
+</table>
+<FooterNav />
+
+@code {
+
+    bool IsLoaded = false;
+
+    private IEnumerable<ClientDTO> clients;
+
+    protected override async Task OnInitializedAsync()
+    {
+        clients = await clientService.GetClient();
+
+        IsLoaded = true;
+    }
+
+    string EnumToString(int status)
+    {
+        switch (status)
+        {
+            case 0:
+                return "Activo";
+            case 1:
+                return "Inactivo";
+            case 2:
+                return "Bloqueado";
+            default:
+                return "Desconocido";
+        }
+    }
+
+}

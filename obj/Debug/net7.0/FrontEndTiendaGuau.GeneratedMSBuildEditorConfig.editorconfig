@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = FrontEndTiendaGuau
+build_property.RootNamespace = FrontEndTiendaGuau
+build_property.ProjectDir = C:\platzi\FrontEndTiendaGuau\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\platzi\FrontEndTiendaGuau
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/platzi/FrontEndTiendaGuau/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/platzi/FrontEndTiendaGuau/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Product/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxDcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Product/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxEZWxldGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Product/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Product/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Product/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/platzi/FrontEndTiendaGuau/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/platzi/FrontEndTiendaGuau/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Client/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XENyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-k98lcxtrnx
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Client/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XERlbGV0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-yo87rzpno2
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Client/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-nyoborv7dg
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Client/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XEVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-123fe4eotq
+
+[C:/platzi/FrontEndTiendaGuau/Pages/Client/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XEluZGV4LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-n8z56laaaw
+
+[C:/platzi/FrontEndTiendaGuau/Shared/FooterNav.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlck5hdi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-6koaiohtof
+
+[C:/platzi/FrontEndTiendaGuau/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-8jgai5cxln
+
+[C:/platzi/FrontEndTiendaGuau/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-irsq6t0rc7

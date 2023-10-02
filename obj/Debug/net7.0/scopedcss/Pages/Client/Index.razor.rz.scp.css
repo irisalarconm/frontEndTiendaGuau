@@ -1,0 +1,37 @@
+.tb[b-n8z56laaaw] {
+    background: linear-gradient(to bottom, #8DC6F1, #BFB5EA);
+    margin: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+    .tb th[b-n8z56laaaw], td[b-n8z56laaaw] {
+        text-align: center;
+        border: 3px solid #fff; /* Bordes grises */
+        color: #000000;
+        padding-left:10px;
+        padding-right:10px;
+    }
+    .tb th[b-n8z56laaaw] {
+        border: 3px solid #fff; /* Bordes grises */
+        padding: 12px;
+    }
+.btn-edit[b-n8z56laaaw]{
+    background-color: greenyellow;
+}
+.btn-details[b-n8z56laaaw] {
+    background-color: #00BF26;
+}
+.btn-delete[b-n8z56laaaw] {
+    background-color: #F84848;
+}
+.btn-create[b-n8z56laaaw] {
+    background-color: #6EBF00;
+    margin-left:120px;
+}
+h3[b-n8z56laaaw] {
+    margin: auto;
+    background: linear-gradient(to bottom, #8DC6F1, #BFB5EA);
+    text-align: center;
+    width: 400px;
+    border-radius: 3px;
+}

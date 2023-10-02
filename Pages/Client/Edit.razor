@@ -1,0 +1,83 @@
+﻿@using Services;
+@using ModelsDTO;
+
+@page "/Client/Edit/{id:int}";
+@inject ClientService clientService;
+@inject NavigationManager navegation;
+
+
+<h3>You are updating a client 😨</h3>
+
+<EditForm Model="client" OnSubmit="OnSubmit">
+ <div class="form-edit">
+        <div class="div-lab mb-3">
+            <label class="form-label">Name</label>
+            <div class="inp"><InputText class="form-control" @bind-Value="client.NameClient"></InputText></div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Lastname</label>
+            <div class="inp">
+                <InputText class="form-control" @bind-Value="client.LastnameClient"></InputText>
+            </div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">DNI</label>
+            <div class="inp">
+                <InputNumber class="form-control" @bind-Value="client.DNIClient"></InputNumber>
+            </div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Address</label>
+            <div class="inp">
+                <InputText class="form-control" @bind-Value="client.AdressClient"></InputText>
+            </div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Phone</label>
+            <div class="inp">
+                <InputNumber class="form-control" @bind-Value="client.Phone"></InputNumber>
+            </div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Status</label>
+            <div class="inp">
+                <InputNumber class="form-control" @bind-Value="client.status"></InputNumber>
+            </div>
+        </div>
+        <div class="btn-div">
+            <button class="btn btn-update" type="submit">Update</button>
+
+            <a class="btn btn-warning" href="Client/index">Back</a>
+        </div>
+</div>
+</EditForm>
+<FooterNav/>
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+
+    ClientDTO client = new ClientDTO();
+
+    bool IsUpdated = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        client = await clientService.GetClientById(id);
+
+    }
+
+    private async Task OnSubmit()
+    {
+        await clientService.UpdateClient(client);
+
+        IsUpdated = true;
+
+        if(IsUpdated)
+        {
+            navegation.NavigateTo("/Client/index");
+        }
+
+    }
+
+}

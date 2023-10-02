@@ -1,0 +1,55 @@
+﻿@using FrontEndTiendaGuau.ModelsDTO;
+@using Services;
+
+@page "/Client/Delete/{id:int}"
+@inject ClientService clientService;
+@inject NavigationManager navegation;
+
+<h3>Are you sure? 🤨 </h3>
+
+<h4>You are deleting this client:</h4>
+
+<table class="tb-details table">
+    <tr>
+        <th>C L I E N T</th>
+        <td>@client.NameClient @client.LastnameClient</td>
+    </tr>
+    <tr>
+        <th>D N I</th>
+        <td>@client.DNIClient</td>
+    </tr>
+</table>
+<div class="btn-div">
+    <button class="btn btn-delete" type="submit" @onclick="OnSubmit">Delete</button>
+
+    <a class="btn btn-warning" href="Client/index">Back</a>
+</div>
+
+@code {
+
+    [Parameter]
+    public int id { get; set;}
+
+    bool IsDeleted = false;
+
+    ClientDTO client = new ClientDTO();
+
+    protected override async Task OnInitializedAsync()
+    {
+        client = await clientService.GetClientById(id);
+    }
+
+    private async Task OnSubmit()
+    {
+        await clientService.DeleteClient(id);
+
+        IsDeleted = true;
+
+        if (IsDeleted)
+        {
+            navegation.NavigateTo("/Client/index");
+        }
+
+    }
+
+}

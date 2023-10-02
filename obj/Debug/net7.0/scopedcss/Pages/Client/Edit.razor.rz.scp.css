@@ -1,0 +1,47 @@
+h3[b-123fe4eotq] {
+    margin: auto;
+    background: linear-gradient(to bottom, #8DC6F1, #BFB5EA);
+    text-align: center;
+    width: 500px;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+.form-edit[b-123fe4eotq] {
+    background: linear-gradient(to bottom, #8DC6F1, #BFB5EA);
+    margin: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 70%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.inp[b-123fe4eotq] {
+    width: 400px;
+}
+
+.div-lab[b-123fe4eotq] {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.btn-div[b-123fe4eotq] {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-update[b-123fe4eotq] {
+    background-color: #6EBF00;
+    margin-left: 50px;
+}
+
+label[b-123fe4eotq] {
+    width: 150px;
+    font-size: 25px;
+}

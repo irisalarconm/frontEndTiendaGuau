@@ -1,0 +1,52 @@
+﻿@using FrontEndTiendaGuau.Services;
+@using ModelsDTO;
+
+
+@page "/Product/Details/{id:int}"
+@inject ProductService productService;
+
+<h3>Details</h3>
+<table class="tb-details table">
+    <tr>
+        <th>Id Product</th>
+        <td>@product.ProductId</td>
+    </tr>
+    <tr>
+        <th>Id Client</th>
+        <td>@product.ClientId</td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td>@product.NameProduct</td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td>@product.Description</td>
+    </tr>
+    <tr>
+        <th>Price</th>
+        <td>@product.Price</td>
+    </tr>
+</table>
+<div class="btn-div">
+    <a class="btn btn-warning" href="Product/index">Back</a>
+</div>
+
+
+<FooterNav />
+
+
+@code {
+
+    [Parameter]
+    public int id { get; set; }
+
+    ProductDTO product = new ProductDTO();
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await productService.GetProductById(id);
+
+    }
+
+}
