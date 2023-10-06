@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-+EyZ0uzLbr7DGhxMxIMWkByFTZs2bFnqRI35R0zAEIM=",
+      "hash": "sha256-wS7RPUW14PhOMrSRdB5FaJtwVeYEgtICCvqhl5DpEBQ=",
       "url": "css\/app.css"
     },
     {
@@ -73,7 +73,7 @@
       "url": "sample-data\/weather.json"
     },
     {
-      "hash": "sha256-xZ4OdOZMXYHJVK8qYLGOBezI4J7PorzWisoy9ta3X6A=",
+      "hash": "sha256-njNbreZRpCN65hi\/MIuU6Xj3ZepGt7Se3avo0p2OgAw=",
       "url": "FrontEndTiendaGuau.styles.css"
     },
     {
@@ -869,11 +869,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-ZDSL7KHPlPkDgGlAEbduOecv0XvNmc2bR9EvqsmO+pA=",
+      "hash": "sha256-AkOf+uIOw+iwCLDWRPNX2K\/YZjcsPsw2XJuXTyuL3J4=",
       "url": "_framework\/FrontEndTiendaGuau.dll"
     },
     {
-      "hash": "sha256-Y3gqC57vkBylrxKRDMsOnu\/gAHbBIRlZ8tKqXhtz5B8=",
+      "hash": "sha256-Gu1buj8Y\/50PS1ePBIPgRjYWzuXHfFZKPSlw7LBconE=",
       "url": "_framework\/FrontEndTiendaGuau.pdb"
     },
     {
@@ -881,9 +881,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-JX5hS3YnqCsSzuB9yTvuIset1nv5wtrWJU4vPC3mo7A=",
+      "hash": "sha256-vWwtMQ7SsuotWdxD\/9y8MnUsBarCPvDf1lufuIR6c2Y=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "W0\/O4Cje"
+  "version": "1wfJP5pU"
 };

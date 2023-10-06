@@ -3,6 +3,7 @@
 
 html, body {
     font-family: 'Pangolin', cursive;
+    background: linear-gradient(to left, #CFBAF3 0%, #BAE2F3 70%);
 }
 
 h1:focus {

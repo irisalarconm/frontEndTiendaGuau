@@ -1,0 +1,46 @@
+﻿
+.tb {
+    background: linear-gradient(to bottom, #8DC6F1, #BFB5EA);
+    margin: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+    width:900px;
+}
+
+    .tb th, td {
+        text-align: center;
+        border: 3px solid #fff; /* Bordes grises */
+        color: #000000;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .tb th {
+        border: 3px solid #fff; /* Bordes grises */
+        padding: 12px;
+    }
+
+.btn-edit {
+    background-color: greenyellow;
+}
+
+.btn-details {
+    background-color: #00BF26;
+}
+
+.btn-delete {
+    background-color: #F84848;
+}
+
+.btn-create {
+    background-color: #6EBF00;
+    margin-left: 120px;
+}
+
+h3 {
+    margin: auto;
+    background: linear-gradient(to bottom, #8DC6F1, #BFB5EA);
+    text-align: center;
+    width: 400px;
+    border-radius: 3px;
+}

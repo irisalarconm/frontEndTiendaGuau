@@ -1,5 +1,56 @@
-﻿<h3>Delete</h3>
+﻿@using FrontEndTiendaGuau.Services;
+@using ModelsDTO;
+
+@page "/Product/Delete/{id:int}"
+@inject ProductService productService;
+@inject NavigationManager navigation;
+
+<h3>Are you sure you want to delete?😫</h3>
+
+<table class="tb-details table">
+    <tr>
+        <th>Name</th>
+        <td>@product.NameProduct</td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td>@product.Description</td>
+    </tr>
+    <tr>
+        <th>Price</th>
+        <td>@product.Price</td>
+    </tr>
+</table>
+<div class="btn-div">
+    <button class="btn btn-delete" type="submit" @onclick="OnSubmit">Delete</button>
+
+    <a class="btn btn-warning" href="Product/index">Back</a>
+</div>
+
+
+<FooterNav />
+
 
 @code {
+    [Parameter]
+    public int id { get; set; }
 
+    bool IsDeleted = false;
+
+    ProductDTO product = new ProductDTO();
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await productService.GetProductById(id);
+    }
+
+    private async Task OnSubmit()
+    {
+        await productService.DeleteProduct(id);
+
+        IsDeleted = true;
+
+        if (IsDeleted)
+            navigation.NavigateTo("Product/index");
+    }
 }

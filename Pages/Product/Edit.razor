@@ -1,5 +1,63 @@
-﻿<h3>Edit</h3>
+﻿@using FrontEndTiendaGuau.Services;
+@using ModelsDTO;
+
+@page "/Product/Edit/{id:int}";
+@inject ProductService productService;
+@inject NavigationManager navigation;
+
+<h3>You are updating a product 😳</h3>
+
+<EditForm Model="product" OnSubmit="OnSubmit">
+    <div class="form-edit">
+        <div class="div-lab mb-3">
+            <label class="form-label">Name</label>
+            <div class="inp"><InputText class="form-control" @bind-Value="product.NameProduct"></InputText></div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Client Id</label>
+            <div class="inp"><InputNumber class="form-control" @bind-Value="product.ClientId"></InputNumber></div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Description</label>
+            <div class="inp"><InputText class="form-control" @bind-Value="product.Description"></InputText></div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Price</label>
+            <div class="inp"><InputNumber class="form-control" @bind-Value="product.Price"></InputNumber></div>
+        </div>
+        <div class="btn-div">
+            <button class="btn btn-update" type="submit">Update</button>
+
+            <a class="btn btn-warning" href="Product/index">Back</a>
+        </div>
+    </div>
+</EditForm>
+
+<FooterNav/>
 
 @code {
+    [Parameter]
+    public int id { get; set; }
+
+    ProductDTO product = new ProductDTO();
+
+    bool IsUpdated = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await productService.GetProductById(id);
+    }
+
+    private async Task OnSubmit()
+    {
+        await productService.UpdateProduct(product);
+
+        IsUpdated = true;
+
+        if (IsUpdated)
+        {
+            navigation.NavigateTo("/Product/index");
+        }
+    }
 
 }

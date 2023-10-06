@@ -1,5 +1,70 @@
-﻿<h3>Create</h3>
+﻿@using FrontEndTiendaGuau.Services;
+@using ModelsDTO;
+
+@page "/Product/Create"
+@inject ProductService productService;
+@inject ClientService clientService;
+@inject NavigationManager navigation;
+
+<h3>Create</h3>
+
+<EditForm Model="product" OnSubmit="OnSubmit">
+    <div class="form-create">
+        <div class="div-lab mb-3">
+            <label class="form-label">Name</label>
+            <div class="inp"><InputText class="form-control" @bind-Value="product.NameProduct"></InputText></div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Client Id</label>
+            <div class="inp"><InputNumber class="form-control" @bind-Value="product.ClientId"></InputNumber></div>
+        </div>
+        <div class="div-lab mb-3">
+            <select class="form-select">
+                @foreach(var e in client)
+                {
+                    <option>@e.NameClient</option>
+                }
+            </select>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Description</label>
+            <div class="inp"><InputText class="form-control" @bind-Value="product.Description"></InputText></div>
+        </div>
+        <div class="div-lab mb-3">
+            <label class="form-label">Price</label>
+            <div class="inp"><InputNumber class="form-control" @bind-Value="product.Price"></InputNumber></div>
+        </div>
+        <div class="btn-div">
+            <button class="btn btn-create" type="submit">Create</button>
+
+            <a class="btn btn-warning" href="Product/index">Back</a>
+        </div>
+    </div>
+</EditForm>
+
+<FooterNav />
 
 @code {
+
+    ProductDTO product = new ProductDTO();
+
+    private IEnumerable<ClientDTO> client;
+
+    bool IsCreated = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        client = await clientService.GetClient();
+    }
+
+    private async Task OnSubmit()
+    {
+        await productService.CreateProduct(product);
+
+        IsCreated = true;
+
+        if (IsCreated) { navigation.NavigateTo("Product/index"); }
+            
+    }
 
 }

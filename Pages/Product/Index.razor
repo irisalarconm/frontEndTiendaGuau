@@ -9,7 +9,9 @@
 
 <h3>P R O D U C T S</h3>
 
-<table class="table">
+<a href="/Product/Create" class="btn btn-create">Create New Product</a>
+
+<table class="tb">
   
    <thead>
         <tr>
@@ -24,6 +26,7 @@
         @if(IsLoaded){
         @foreach(var element in products)
         {
+
             <tr>
                 <td>@element.ProductId</td>
                 <td>@element.ClientId</td>
@@ -35,13 +38,11 @@
                     <a href="/Product/Details/@element.ProductId" class="btn btn-details" type="button"> <span class="oi oi-spreadsheet" aria-hidden="true"></span></a>
                     <a href="/Product/Delete/@element.ProductId" class="btn btn-delete" type="button"> <span class="oi oi-trash" aria-hidden="true"></span></a>
                 </td>
-            </tr>           
+            </tr>
         }
     }
-    <tbody>
-
-    </tbody>
 </table>
+<FooterNav/>
 @code {
     bool IsLoaded = false;
 

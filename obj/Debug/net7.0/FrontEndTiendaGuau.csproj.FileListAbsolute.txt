@@ -836,3 +836,8 @@ C:\platzi\FrontEndTiendaGuau\obj\Debug\net7.0\scopedcss\Pages\Client\Create.razo
 C:\platzi\FrontEndTiendaGuau\obj\Debug\net7.0\scopedcss\Pages\Client\Delete.razor.rz.scp.css
 C:\platzi\FrontEndTiendaGuau\obj\Debug\net7.0\scopedcss\Pages\Client\Details.razor.rz.scp.css
 C:\platzi\FrontEndTiendaGuau\obj\Debug\net7.0\scopedcss\Pages\Client\Edit.razor.rz.scp.css
+C:\platzi\FrontEndTiendaGuau\obj\Debug\net7.0\scopedcss\Pages\Product\Index.razor.rz.scp.css
+C:\platzi\FrontEndTiendaGuau\obj\Debug\net7.0\scopedcss\Pages\Product\Create.razor.rz.scp.css
+C:\platzi\FrontEndTiendaGuau\obj\Debug\net7.0\scopedcss\Pages\Product\Delete.razor.rz.scp.css
+C:\platzi\FrontEndTiendaGuau\obj\Debug\net7.0\scopedcss\Pages\Product\Details.razor.rz.scp.css
+C:\platzi\FrontEndTiendaGuau\obj\Debug\net7.0\scopedcss\Pages\Product\Edit.razor.rz.scp.css
